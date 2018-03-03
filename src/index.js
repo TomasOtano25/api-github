@@ -42,13 +42,36 @@ const CardList = props => {
     <div>
       {props.cards.map(card => (
         <Card
-          name={card.name}
+          {...card}
+          /*name={card.name}
           avatar_url={card.avatar_url}
-          company={card.company}
+          company={card.company}*/
         />
       ))}
     </div>
   );
 };
 
-ReactDom.render(<CardList cards={data} />, document.getElementById("root"));
+class Form extends React.Component {
+  render() {
+    return (
+      <form>
+        <input type="text" placeholder="Github username" />
+        <button type="submit">Add card</button>
+      </form>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Form />
+        <CardList cards={data} />
+      </div>
+    );
+  }
+}
+
+ReactDom.render(<App />, document.getElementById("root"));
