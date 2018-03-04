@@ -30,6 +30,7 @@ const CardList = props => {
     <div>
       {props.cards.map(card => (
         <Card
+          key={card.id}
           {...card}
           /*name={card.name}
           avatar_url={card.avatar_url}
