@@ -1,14 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-.info {
-  padding: 1rem;
-}
-
-.card {
-  display: flex;
-  background: #f2f2f2;
-  padding: 0.5em;
-}
